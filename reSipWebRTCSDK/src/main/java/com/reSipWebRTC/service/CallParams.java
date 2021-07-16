@@ -1,0 +1,56 @@
+package com.reSipWebRTC.service;
+
+import com.reSipWebRTC.util.Direction;
+
+public interface CallParams {
+	Direction getDirection();
+	void setDirection(Direction mDirection);
+	String remoteDisplayName();
+	void setRemoteDisplayName(String remoteDisplayName);
+	String remoteUri();
+	void setRemoteUri(String localUri);
+	String localDisplayName();
+	void setLocalDisplayName(String localDisplayName);
+	String localUri();
+	void setLocalUri(String peerUri);
+	void setStartTime(long startTime);
+	long getStartTime();
+	void setEndTime(long endTime);
+	long getEndTime();
+	void setState(int state);
+	int getState();
+	void setReason(int reason);
+	int getReasion();
+	void setRejectReasonCode(int rejectReasonCode);
+	int getRejectReasonCode();
+	CallReportStatus getCallReportStatus();
+	void setCallReportStatus(CallReportStatus callReportStatus);
+	boolean audioEnabled();
+	void enableAudio(boolean audioCall);
+	boolean audioProcessing();
+	void enableaudioProcessing(boolean audioProcessing);
+	void setAgcControlLevel(int level);
+	int agcControlLevel();
+	void setAgcControlGain(int gain);
+	int agcControlGain();
+	void setAudioCodec(String audioCodec);
+	String audioCodec();
+	void setAudioStartBitrate(int audioStartBitrate);
+	int audioStartBitrate();
+	boolean videoEnabled();
+	void enableVideo(boolean videoCall);
+	void setVideoWidth(int videoWidth);
+	int videoWidth();
+	void setVideoHeight(int videoHeight);
+	int videoHeight();
+	void setVideoFps(int videoFps);
+	int videoFps();
+	void setVideoCodec(String videoCodec);
+	String videoCodec();
+	void setVideoMaxBitrate(int videoMaxBitrate);
+	int videoMaxBitrate();
+	void setMute(boolean mute);
+	boolean isMute();
+	void setHf(boolean hf);
+	boolean isHf();
+}
